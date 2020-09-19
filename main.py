@@ -26,19 +26,31 @@ async def home():
 @app.get("/rate")
 async def rate_item_route(user: int, item: int, score: int):
     rate_item(user, item, score)
-    return {"message": _("User %d rated item %d with score %d") % user % item % score}
+
+    message = _('User %(user)s rated  item %(item)s with score %(score)s.') % {'user': user, 'item': item,
+                                                                               'score': score}
+
+    return {"message": message}
 
 
 @app.get("/get-probability")
 async def get_probability_route(user: int, item: int):
     probability = get_probability(user, item)
-    return {"message": _("User %d has the probability %d to buy item %d.") % user % probability % item}
+
+    message = _('User %(user)s has the probability %(probability)s to buy item %(item)s.') % {'user': user,
+                                                                                              'probability': probability,
+                                                                                              'item': item}
+
+    return {"message": message}
 
 
 @app.get("/recommend")
 async def recommend_route(user: int, limit: int = 100):
     suggestions = suggest(user, limit)
+
+    message = _('Got the suggestions for user with id %(user)s ') % {'user': user}
+
     return {
-        "message": _("Got the suggestions for user %d.") % user,
+        "message": message,
         "data": suggestions
     }
