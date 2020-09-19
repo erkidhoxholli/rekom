@@ -13,6 +13,6 @@ generate_translations:
 	echo "** Po files generated successfully under /translations directory"
 	echo "** Please use PoEdit to open po files and generate mo files that will be used for translations"
 
-run:
+start:
 	echo ">>>>>>>> Running the project"
 	uvicorn main:app --reload
