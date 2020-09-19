@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from rekom.engine import rate_item, get_probability, suggest
+from rekom.engine import rate_item, get_probability, suggest, update
 from settings.config import setup_configuration
 from settings.i18n import get_translations
 
@@ -54,3 +54,10 @@ async def recommend_route(user: int, limit: int = 100):
         "message": message,
         "data": suggestions
     }
+
+
+@app.get("/batch-update")
+async def recommend_route(limit: int = 100):
+    update(limit)
+
+    return {"message": _('Updated the results!')}
