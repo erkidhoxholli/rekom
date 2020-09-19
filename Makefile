@@ -20,8 +20,6 @@ setup_env_server:
 	sudo apt install python3 python3-pip -y redis-server
 	pip3 install -r requirements.txt
 
-	## TODO: let
-
 ## only using uvicorn and not docker
 start_server:
 	uvicorn main:app --host 0.0.0.0 --port 80
