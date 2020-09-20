@@ -1,12 +1,21 @@
 from fastapi import FastAPI
+import os
+from database.redis import is_connected
 
-from rekom.engine import rate_item, get_probability, suggest, update
+from rekom.engine import rate_item, get_probability, suggest, update, clear_db
 from settings.config import setup_configuration
 from settings.i18n import get_translations
 
-config = setup_configuration('dev')  ## get this from os env variable
-env_name = config['APP']['ENVIRONMENT']
+environment = 'dev'
+if os.environ.get('ENVIRONMENT'):
+    environment = os.environ.get('ENVIRONMENT')
 
+config = setup_configuration(environment)
+
+if is_connected():
+    print(f'Connected to redis successfully!')
+
+env_name = config['APP']['ENVIRONMENT']
 print(f'Running on {env_name} environment!')
 
 _ = get_translations('pl')
@@ -57,7 +66,13 @@ async def recommend_route(user: int, limit: int = 100):
 
 
 @app.get("/batch-update")
-async def recommend_route(limit: int = 100):
+async def batch_update_route(limit: int = 100):
     update(limit)
 
     return {"message": _('Updated the results!')}
+
+@app.get("/clear-db")
+async def clear_db_route():
+    clear_db()
+
+    return {"message": _('Database cleared!')}

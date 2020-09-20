@@ -2,7 +2,6 @@ ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 PYGETTEXT_FILE:=$(shell locate pygettext.py | head -n 1)
 
 generate_translations:
-	echo ">>>>>> Generating translations"
 	cd $(ROOT_DIR)
 
 	$(PYGETTEXT_FILE) -d base -o translations/base.pot main.py
@@ -25,5 +24,4 @@ start_server:
 	uvicorn main:app --host 0.0.0.0 --port 80
 
 start:
-	echo ">>>>>>>> Running the project"
 	uvicorn main:app --reload
