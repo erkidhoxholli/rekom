@@ -5,3 +5,4 @@ def get_translations(language='en'):
     language_translations.install()
     _ = language_translations.gettext
     return _
+

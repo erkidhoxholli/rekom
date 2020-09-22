@@ -21,7 +21,7 @@ setup_env_server:
 
 ## only using uvicorn and not docker
 start_server:
-	uvicorn main:app --host 0.0.0.0 --port 80
+	cd app && uvicorn main:api --host 0.0.0.0 --port 80 --workers 1 ## TODO: increase nr of workers later
 
 start:
-	uvicorn main:app --reload
+	cd app && uvicorn main:api --reload

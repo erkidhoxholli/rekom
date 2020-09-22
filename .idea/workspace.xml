@@ -2,9 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5106698-87aa-4e12-8604-8041332f125f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/settings/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/app/babel.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database/redis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekom/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/engine/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekom/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/engine/core.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rekom/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/engine/engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/settings/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/dev.ini" beforeDir="false" afterPath="$PROJECT_DIR$/app/settings/dev.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/i18n.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/settings/i18n.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/prod.ini" beforeDir="false" afterPath="$PROJECT_DIR$/app/settings/prod.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translations/en/LC_MESSAGES/base.mo" beforeDir="false" afterPath="$PROJECT_DIR$/app/translations/en/LC_MESSAGES/base.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translations/en/LC_MESSAGES/base.po" beforeDir="false" afterPath="$PROJECT_DIR$/app/translations/en/LC_MESSAGES/base.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translations/pl/LC_MESSAGES/base.mo" beforeDir="false" afterPath="$PROJECT_DIR$/app/translations/pl/LC_MESSAGES/base.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translations/pl/LC_MESSAGES/base.po" beforeDir="false" afterPath="$PROJECT_DIR$/app/translations/pl/LC_MESSAGES/base.po" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +36,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Erkid Hoxholli &lt;e.hoxholli@cit.edu.al&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1hh4Dm8vLHtb1Xw6daVt6eg6Bws" />
@@ -34,15 +56,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/src" />
+      <recent name="$PROJECT_DIR$/rekom" />
+      <recent name="$PROJECT_DIR$/scripts" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/translations/pl/LC_MESSAGES" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/scripts" />
-      <recent name="$PROJECT_DIR$/notebooks" />
-      <recent name="$PROJECT_DIR$/translations/en/LC_MESSAGES" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/settings" />
     </key>
   </component>
   <component name="RunManager">
@@ -58,7 +80,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -84,32 +106,73 @@
       <option name="presentableId" value="Default" />
       <updated>1600449872616</updated>
     </task>
+    <task id="LOCAL-00001" summary="feat: check redis connection and route to clear all db">
+      <created>1600612449345</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600612449345</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="feat: check redis connection and route to clear all db" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: check redis connection and route to clear all db" />
   </component>
   <component name="WindowStateProjectService">
     <state x="380" y="258" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600505732722">
       <screen x="0" y="23" width="1387" height="877" />
     </state>
     <state x="380" y="258" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1387.877@0.23.1387.877" timestamp="1600505732722" />
-    <state width="1173" height="211" key="GridCell.Tab.0.bottom" timestamp="1600450196600">
+    <state x="198" y="23" width="1016" height="790" key="CommitChangelistDialog2" timestamp="1600612449142">
       <screen x="0" y="23" width="1387" height="877" />
     </state>
-    <state width="1173" height="211" key="GridCell.Tab.0.bottom/0.23.1387.877@0.23.1387.877" timestamp="1600450196600" />
-    <state width="1173" height="211" key="GridCell.Tab.0.center" timestamp="1600450196599">
+    <state x="198" y="23" width="1016" height="790" key="CommitChangelistDialog2/0.23.1387.877@0.23.1387.877" timestamp="1600612449142" />
+    <state width="943" height="252" key="GridCell.Tab.0.bottom" timestamp="1600614102437">
       <screen x="0" y="23" width="1387" height="877" />
     </state>
-    <state width="1173" height="211" key="GridCell.Tab.0.center/0.23.1387.877@0.23.1387.877" timestamp="1600450196599" />
-    <state width="1173" height="211" key="GridCell.Tab.0.left" timestamp="1600450196598">
+    <state width="943" height="252" key="GridCell.Tab.0.bottom/0.23.1387.877@0.23.1387.877" timestamp="1600614102437" />
+    <state width="1173" height="211" key="GridCell.Tab.0.bottom/0.23.1389.877@0.23.1389.877" timestamp="1600539256574" />
+    <state width="943" height="252" key="GridCell.Tab.0.center" timestamp="1600614102436">
       <screen x="0" y="23" width="1387" height="877" />
     </state>
-    <state width="1173" height="211" key="GridCell.Tab.0.left/0.23.1387.877@0.23.1387.877" timestamp="1600450196598" />
-    <state width="1173" height="211" key="GridCell.Tab.0.right" timestamp="1600450196599">
+    <state width="943" height="252" key="GridCell.Tab.0.center/0.23.1387.877@0.23.1387.877" timestamp="1600614102436" />
+    <state width="1173" height="211" key="GridCell.Tab.0.center/0.23.1389.877@0.23.1389.877" timestamp="1600539256574" />
+    <state width="943" height="252" key="GridCell.Tab.0.left" timestamp="1600614102436">
       <screen x="0" y="23" width="1387" height="877" />
     </state>
-    <state width="1173" height="211" key="GridCell.Tab.0.right/0.23.1387.877@0.23.1387.877" timestamp="1600450196599" />
+    <state width="943" height="252" key="GridCell.Tab.0.left/0.23.1387.877@0.23.1387.877" timestamp="1600614102436" />
+    <state width="1173" height="211" key="GridCell.Tab.0.left/0.23.1389.877@0.23.1389.877" timestamp="1600539256573" />
+    <state width="943" height="252" key="GridCell.Tab.0.right" timestamp="1600614102437">
+      <screen x="0" y="23" width="1387" height="877" />
+    </state>
+    <state width="943" height="252" key="GridCell.Tab.0.right/0.23.1387.877@0.23.1387.877" timestamp="1600614102437" />
+    <state width="1173" height="211" key="GridCell.Tab.0.right/0.23.1389.877@0.23.1389.877" timestamp="1600539256574" />
+    <state width="943" height="252" key="GridCell.Tab.1.bottom" timestamp="1600614102439">
+      <screen x="0" y="23" width="1387" height="877" />
+    </state>
+    <state width="943" height="252" key="GridCell.Tab.1.bottom/0.23.1387.877@0.23.1387.877" timestamp="1600614102439" />
+    <state width="943" height="252" key="GridCell.Tab.1.center" timestamp="1600614102438">
+      <screen x="0" y="23" width="1387" height="877" />
+    </state>
+    <state width="943" height="252" key="GridCell.Tab.1.center/0.23.1387.877@0.23.1387.877" timestamp="1600614102438" />
+    <state width="943" height="252" key="GridCell.Tab.1.left" timestamp="1600614102438">
+      <screen x="0" y="23" width="1387" height="877" />
+    </state>
+    <state width="943" height="252" key="GridCell.Tab.1.left/0.23.1387.877@0.23.1387.877" timestamp="1600614102438" />
+    <state width="943" height="252" key="GridCell.Tab.1.right" timestamp="1600614102438">
+      <screen x="0" y="23" width="1387" height="877" />
+    </state>
+    <state width="943" height="252" key="GridCell.Tab.1.right/0.23.1387.877@0.23.1387.877" timestamp="1600614102438" />
     <state x="183" y="87" key="SettingsEditor" timestamp="1600449953896">
       <screen x="0" y="23" width="1387" height="877" />
     </state>
     <state x="183" y="87" key="SettingsEditor/0.23.1387.877@0.23.1387.877" timestamp="1600449953896" />
+    <state x="491" y="244" key="Vcs.Push.Dialog.v2" timestamp="1600612451580">
+      <screen x="0" y="23" width="1387" height="877" />
+    </state>
+    <state x="491" y="244" key="Vcs.Push.Dialog.v2/0.23.1387.877@0.23.1387.877" timestamp="1600612451580" />
   </component>
 </project>

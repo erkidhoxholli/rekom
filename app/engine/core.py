@@ -1,6 +1,5 @@
 import redis
 import math
-
 redis_client = redis.StrictRedis(host='localhost', port=6379, db=0, charset="utf-8", decode_responses=True)
 
 
@@ -11,7 +10,7 @@ def rate(item, user, score):
     redis_client.execute_command('SADD', 'users', user)
 
 def clear_db():
-    redis_client.execute_command('FLUSHALL')
+    redis_client.execute_command('FLUSHDB')
 
 def get_user_suggestions(user, max):
     return redis_client.execute_command('ZREVRANGE', f'user:{user}:suggestions', 0, max, 'WITHSCORES')
