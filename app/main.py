@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 import os
 from database import redis
-
+from mlflow import log_metric, log_param, log_artifacts
 from engine.engine import rate_item, get_probability, suggest, update, clear_db
 from settings.config import setup_configuration
 from settings.i18n import get_translations
@@ -40,6 +40,15 @@ async def rate_item_route(user: int, item: int, score: int):
     message = _('User %(user)s rated  item %(item)s with score %(score)s.') % {'user': user, 'item': item,
                                                                                'score': score}
 
+    return {"message": message}
+
+## TODO: send events such as VIEW, ADD_TO_CART, BUY
+@api.get("/send-event")
+async def send_event_route(user: int, item: int, event: str):
+    #send_event(user, item, event)
+
+    message = _('User %(user)s  %(event)s item %(item)s.') % {'user': user, 'event': event,
+                                                                               'item': item}
     return {"message": message}
 
 
